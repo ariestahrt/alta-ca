@@ -15,7 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      # run: docker build . --file Dockerfile --tag testing:$(date +%s)
-      run: docker build -t ariestadocker/belajar-docker:1.0.0 .
-      run: docker run -itd -v $PWD/.env:/.env -p 3000:3000 ariestadocker/belajar-docker:1.0.0
+      run: docker build -t ariestadocker/belajar-docker:1.0.0 . && docker run -itd -v $PWD/.env:/.env -p 3000:3000 ariestadocker/belajar-docker:1.0.0
       
