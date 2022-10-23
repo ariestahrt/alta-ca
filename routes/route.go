@@ -31,4 +31,8 @@ func InitRoute(e *echo.Echo, db *gorm.DB) {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(200, "Hello World")
 	})
+
+	e.GET("/tes", func(c echo.Context) error {
+		return c.String(200, "Tes Route")
+	})
 }
