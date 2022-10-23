@@ -15,5 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker stop myapp && docker rm myapp && docker build -t ariestadocker/belajar-docker:1.0.0 . && docker run -itd -v $PWD/.env:/.env -p 3000:3000 --name myapp ariestadocker/belajar-docker:1.0.0
+      run: docker stop myapp || docker rm myapp || docker build -t ariestadocker/belajar-docker:1.0.0 . || docker run -itd -v $PWD/.env:/.env -p 3000:3000 --name myapp ariestadocker/belajar-docker:1.0.0 || true
       
